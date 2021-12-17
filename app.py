@@ -1,9 +1,9 @@
-%%writefile app.py
 import pandas as pd
 import streamlit as st
 import numpy as np
 import sklearn
 from sklearn.neighbors import KNeighborsClassifier
+import joblib
 from joblib import dump, load
 
 st.title("Welcome to noncagarmeercazzo!")
