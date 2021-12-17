@@ -4,6 +4,7 @@ import numpy as np
 import sklearn
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.neighbors import KNeighborsClassifier
+import joblib
 from joblib import dump, load
 
 st.title("Welcome to noncagarmeercazzo!")
