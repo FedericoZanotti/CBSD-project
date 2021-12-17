@@ -3,7 +3,8 @@ import streamlit as st
 import numpy as np
 import joblib
 from joblib import dump, load
-
+import sklearn
+from sklearn.neighbors import KNeighborsClassifier
 st.title("Welcome to noncagarmeercazzo!")
 
 st.text("In questa demo potrai caricare un tuo file CSV con le risposte del questionario IADQ o scrivere direttamente le risposte nella sezione dopo")
@@ -32,7 +33,6 @@ col1, col2, col3,col4, col5, col6, col7, col8, col9 = st.columns(9)
 with col1:
   st.header("Pr1")
   number = st.number_input('Pr1', min_value=0, max_value=4, step=1,  key=f'q_1')
-  st.write(number)
   number_list.append(number)
 with col2:
   st.header("Pr2")
@@ -74,8 +74,8 @@ with col9:
   number = st.number_input("FI3",min_value=0, max_value=4, step=1, key=f'q_9')
   number_list.append(number)
 
-  l=np.ones(shape=(1,9))
-  number_df=pd.DataFrame(l,columns=column_names)
+l=np.ones(shape=(1,9))
+number_df=pd.DataFrame(l,columns=column_names)
 
 for i in range(l.shape[1]):
   number_df.iloc[:,i]= number_list[i]
@@ -84,7 +84,7 @@ st.write(number_df)
 
 clf_loaded = load('knn.joblib')
 
-classifier=st.button("Am I Honest or Dishonest")
+classifier=st.button("Am I Honest or Dishonest?")
 if classifier:  
   y_pred=clf_loaded.predict(number_df)
   if y_pred[0]=='H':
