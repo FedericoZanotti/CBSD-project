@@ -3,6 +3,8 @@ import streamlit as st
 import numpy as np
 import sklearn
 from sklearn.neighbors import KNeighborsRegressor
+from sklearn.neighbors import *
+
 from joblib import dump, load
 import base64
 import time
