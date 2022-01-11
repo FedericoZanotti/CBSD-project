@@ -3,14 +3,12 @@ import streamlit as st
 import numpy as np
 import sklearn
 from sklearn.neighbors import KNeighborsRegressor
-from sklearn.neighbors import *
-
 from joblib import dump, load
 import base64
 import time
 timestr = time.strftime("%Y%m%d-%H%M%S")
 st.title("Welcome to the Demo!")
-st.write(sklearn.neighbors._dist_metrics)
+st.write(sklearn.__version__)
 st.write(" In this demo you can load your file CSV well with the questionnary IADQ's answers or directly write them on this web app")
 
 # st.title("Button")
