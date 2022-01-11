@@ -7,9 +7,9 @@ from joblib import dump, load
 import base64
 import time
 timestr = time.strftime("%Y%m%d-%H%M%S")
-st.title("Welcome to noncagarmeercazzo!")
+st.title("Welcome to the Demo!")
 
-st.text(" In questa demo potrai caricare un tuo file CSV con le risposte del questionario IADQ o scrivere direttamente le risposte nella sezione dopo ")
+st.write(" In this demo you can load your file CSV well with the questionnary IADQ's answers or directly write them on this web app")
 
 # st.title("Button")
 # result = st.button("Click here")
@@ -86,7 +86,6 @@ clf_loaded = load('knn.joblib')
 df_flag = False
 
 choice = st.radio('DO you want to load a CSV file or to insert manually the questionary answers? :', ['CSV file', 'Manually'])
-st.write(choice)
 if choice=='CSV file':
   st.subheader("Load your file")
   dataframe_loaded=pd.DataFrame()
