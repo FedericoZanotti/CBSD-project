@@ -1,1 +1,1 @@
-# Classification and Reconstrunction of dishonest of the IADQ questionnaire
+# Classification and Reconstruction of dishonest of the IADQ questionnaire
