@@ -2,8 +2,6 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import sklearn
-import sklearn.neighbors
-from sklearn.neighbors import _dist_metrics
 from joblib import dump, load
 import base64
 import time
