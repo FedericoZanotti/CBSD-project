@@ -6,6 +6,8 @@ from sklearn.neighbors import KNeighborsRegressor
 from joblib import dump, load
 import base64
 import time
+import xgboost
+st.write(xgboost.__version__)
 timestr = time.strftime("%Y%m%d-%H%M%S")
 st.title("Welcome to the Demo!")
 st.write(sklearn.__version__)
