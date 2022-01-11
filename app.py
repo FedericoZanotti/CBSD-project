@@ -7,18 +7,11 @@ from joblib import dump, load
 import base64
 import time
 import xgboost
-st.write(xgboost.__version__)
-timestr = time.strftime("%Y%m%d-%H%M%S")
 st.title("Welcome to the Demo!")
-st.write(sklearn.__version__)
 st.write(" In this demo you can load your file CSV well with the questionnary IADQ's answers or directly write them on this web app")
 
-# st.title("Button")
-# result = st.button("Click here")
-# st.write("result",result)
-# if result:
-#   st.write(":smile:")
 def csv_downloader(data, title):
+	timestr = time.strftime("%Y%m%d-%H%M%S")
 	csvfile = data.to_csv(index=False)
 	b64 = base64.b64encode(csvfile.encode()).decode()
 	new_filename = f"{title}.csv".format(timestr)
