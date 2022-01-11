@@ -1,2 +1,2 @@
 joblib==1.1.0
-sklearn
+scikit-learn
