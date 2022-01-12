@@ -15,9 +15,9 @@ st.title("Welcome to the Demo!")
 img = Image.open("Logo_Università_Padova.svg.png")
 st.sidebar.image(img, width=300)
 st.sidebar.write("_Cognitive, Behavioral and Social Data 2021-2022_ ")
-cl = '<p style="font-family:sans-serif; color:Black; font-size: 14px;">Corrado Lorenzo</p>'
-pl = '<p style="font-family:sans-serif; color:Black; font-size: 14px;">Pessina Luca</p>'
-zf = '<p style="font-family:sans-serif; color:Black; font-size: 14px;">Zanotti Federico</p>'
+cl = '<p style="font-family:sans-serif; color:Gray; font-size: 14px;">Corrado Lorenzo</p>'
+pl = '<p style="font-family:sans-serif; color:Gray; font-size: 14px;">Pessina Luca</p>'
+zf = '<p style="font-family:sans-serif; color:Gray; font-size: 14px;">Zanotti Federico</p>'
 
 st.sidebar.markdown(cl, unsafe_allow_html=True)
 st.sidebar.markdown(pl, unsafe_allow_html=True)
