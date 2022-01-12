@@ -1,13 +1,33 @@
 import pandas as pd
 import streamlit as st
+
 import numpy as np
+from PIL import Image
 import sklearn
 from sklearn.neighbors import KNeighborsRegressor
 from joblib import dump, load
 import base64
 import time
 import xgboost
+img = Image.open("index.png")
+st.set_page_config(page_title="Demo", page_icon=img)
 st.title("Welcome to the Demo!")
+img = Image.open("Logo_Università_Padova.svg.png")
+st.sidebar.image(img, width=300)
+st.sidebar.write("_Cognitive, Behavioral and Social Data 2021-2022_ ")
+cl = '<p style="font-family:sans-serif; color:Black; font-size: 14px;">Corrado Lorenzo</p>'
+pl = '<p style="font-family:sans-serif; color:Black; font-size: 14px;">Pessina Luca</p>'
+zf = '<p style="font-family:sans-serif; color:Black; font-size: 14px;">Zanotti Federico</p>'
+
+st.sidebar.markdown(cl, unsafe_allow_html=True)
+st.sidebar.markdown(pl, unsafe_allow_html=True)
+st.sidebar.markdown(zf, unsafe_allow_html=True)
+
+# st.sidebar.write("Corrado Lorenzo")
+# st.sidebar.write("Pessina Luca")
+# st.sidebar.write("Zanotti Federico")
+
+
 st.write(" In this demo you can load your file CSV well with the questionnary IADQ's answers or directly write them on this web app")
 
 def csv_downloader(data, title):
@@ -104,6 +124,16 @@ if choice=='CSV file':
     df_reconstructed = recon(new_df, column_names=column_names, csv=True)
     st.write(df_reconstructed)
     csv_downloader(df_reconstructed, "Reconstructed")
+    st.subheader("Estimation of the Number of Faked Responses out of the Maximum Number of Questions")
+    clfmor = load("mor.joblib")
+    dataframe_loaded['CONDITION']=list(range(dataframe_loaded.shape[0]))
+    # dataframe_loaded['Increased']=list(range(dataframe_loaded.shape[0]))
+    # dataframe_loaded['Invariate']=list(range(dataframe_loaded.shape[0]))
+    y_pred = pd.DataFrame(np.round(clfmor.predict(dataframe_loaded)), columns=["Increased", "Invariate"])
+    y_pred["Decreased"] = np.where((y_pred.Increased == 0) & (y_pred.Increased == 0), 0, 10-y_pred.Increased-y_pred.Invariate)
+    y_pred=y_pred.astype(int)
+    st.write(y_pred)
+    csv_downloader(y_pred, "estimation")
 
 
 
@@ -169,6 +199,16 @@ else:
       st.subheader("Reconstruction")
       st.write(df_reconstructed)
       csv_downloader(df_reconstructed, "Reconstructed_1_questionary")
+
+
+
+
+
+
+
+
+    
+
 
 
 
