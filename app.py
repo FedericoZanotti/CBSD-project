@@ -124,16 +124,6 @@ if choice=='CSV file':
     df_reconstructed = recon(new_df, column_names=column_names, csv=True)
     st.write(df_reconstructed)
     csv_downloader(df_reconstructed, "Reconstructed")
-    st.subheader("Estimation of the Number of Faked Responses out of the Maximum Number of Questions")
-    clfmor = load("mor.joblib")
-    dataframe_loaded['CONDITION']=list(range(dataframe_loaded.shape[0]))
-    # dataframe_loaded['Increased']=list(range(dataframe_loaded.shape[0]))
-    # dataframe_loaded['Invariate']=list(range(dataframe_loaded.shape[0]))
-    y_pred = pd.DataFrame(np.round(clfmor.predict(dataframe_loaded)), columns=["Increased", "Invariate"])
-    y_pred["Decreased"] = np.where((y_pred.Increased == 0) & (y_pred.Increased == 0), 0, 10-y_pred.Increased-y_pred.Invariate)
-    y_pred=y_pred.astype(int)
-    st.write(y_pred)
-    csv_downloader(y_pred, "estimation")
 
 
 
