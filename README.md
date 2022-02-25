@@ -2,7 +2,7 @@
 
 **Source Code**:  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1P-iFPVjkZbR4crYTvtS3S2jHSC-mgpOV?authuser=1)
 
-**Little Demo**:  [![prova](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/[FedericoZanotti]/[CBSD-project]/[main]/[app.py])
+**Little Demo**:  [![CBSD-project](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/[FedericoZanotti]/[CBSD-project]/[main]/[app.py])
 
 This was a very difficult project for the course *Cognitive Behavioral and Social Data*. The professor had just given some datasets to the student and no more information. In my opinion the work my colleagues and me made was over too much, in the sense that we tried everything and in particular we implemented a different apporach w.r.t the other students. 
 
