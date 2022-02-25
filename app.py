@@ -40,15 +40,15 @@ def csv_downloader(data, title):
 	st.markdown(href,unsafe_allow_html=True)
 
 def recon(ar=0,column_names2=[],column_names=[], csv=False):
-  clf1 = load('pr1.joblib')
-  clf2 = load('pr2.joblib')  
-  clf3 = load('pr3.joblib')
-  clf4 = load('fa1.joblib')
-  clf5 = load('fa2.joblib')
-  clf6 = load('fa3.joblib')  
-  clf7 = load('fi1.joblib')
-  clf8 = load('fi2.joblib')
-  clf9 = load('fi3.joblib')
+  clf1 = load('weights\pr1.joblib')
+  clf2 = load('weights\pr2.joblib')  
+  clf3 = load('weights\pr3.joblib')
+  clf4 = load('weights\fa1.joblib')
+  clf5 = load('weights\fa2.joblib')
+  clf6 = load('weights\fa3.joblib')  
+  clf7 = load('weights\fi1.joblib')
+  clf8 = load('weights\fi2.joblib')
+  clf9 = load('weights\fi3.joblib')
   idx1=[0,2,4,7]
   idx2=[1,2,4,6]
   idx3=[0,1,2,3,]
