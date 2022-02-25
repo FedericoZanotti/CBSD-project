@@ -1,7 +1,9 @@
 # Classification and Reconstruction of dishonest of the IADQ questionnaire
 
 **Source Code**:  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1P-iFPVjkZbR4crYTvtS3S2jHSC-mgpOV?authuser=1)
+
 **Little Demo**:  [![prova](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/[FedericoZanotti]/[CBSD-project]/[main]/[app.py])
+
 This was a very difficult project for the course *Cognitive Behavioral and Social Data*. The professor had just given some datasets to the student and no more information. In my opinion the work my colleagues and me made was over too much, in the sense that we tried everything and in particular we implemented a different apporach w.r.t the other students. 
 
 The project has two purposes: the first one was to recognize if a subject had lied answering a psycological questionnaire. This is very interesting, because there are no way to identify a lier, except for some control questions that psycologists insert in the questionnaires. The second purpose was to reconstruct the honest answers for a dishonest subject. This was really challenging and to be honest our work did not resolve this problem, but I think we faced in an original way. 
