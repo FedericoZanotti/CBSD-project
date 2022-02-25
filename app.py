@@ -97,7 +97,7 @@ column_names2 =['Q1','Q2','Q3','Q4','Q5','Q6','Q7','Q8','Q9']
 number_list =[]
 l=np.ones(shape=(1,9))
 number_df=pd.DataFrame(l,columns=column_names)
-clf_loaded = load('weights\knn.joblib')
+clf_loaded = load('weights/knn.joblib')
 df_flag = False
 
 choice = st.radio('DO you want to load a CSV file or to insert manually the questionary answers? :', ['CSV file', 'Manually'])
