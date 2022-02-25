@@ -9,10 +9,10 @@ from joblib import dump, load
 import base64
 import time
 import xgboost
-img = Image.open("index.png")
+img = Image.open("Images/Index.png")
 st.set_page_config(page_title="Demo", page_icon=img)
 st.title("Welcome to the Demo!")
-img = Image.open("Logo_Università_Padova.svg.png")
+img = Image.open("Images/Logo_Università_Padova.svg.png")
 st.sidebar.image(img, width=300)
 st.sidebar.write("_Cognitive, Behavioral and Social Data 2021-2022_ ")
 cl = '<p style="font-family:sans-serif; color:Gray; font-size: 14px;">Corrado Lorenzo</p>'
