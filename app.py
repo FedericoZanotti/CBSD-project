@@ -9,7 +9,7 @@ from joblib import dump, load
 import base64
 import time
 import xgboost
-img = Image.open("Images/Index.png")
+img = Image.open("Images/index.png")
 st.set_page_config(page_title="Demo", page_icon=img)
 st.title("Welcome to the Demo!")
 img = Image.open("Images/Logo_Università_Padova.svg.png")
