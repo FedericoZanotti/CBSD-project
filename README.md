@@ -1,6 +1,6 @@
 # Classification and Reconstruction of dishonest of the IADQ questionnaire
 
-**Source Code**:  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1P-iFPVjkZbR4crYTvtS3S2jHSC-mgpOV?authuser=1)
+**Source Code**:  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](CBSD_Project_IADQ.ipynb)
 
 **Little Demo**:  [![CBSD-project](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/federicozanotti/cbsd-project/main/app.py)
 
